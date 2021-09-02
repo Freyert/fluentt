@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  fluentd:
+    image: fluent/fluentd
+    volumes:
+    - type: bind
+      source: ./etc/
+      target: /fluentd/etc/
+    - type: bind
+      source: ./input
+      target: /var/log/
